@@ -31,52 +31,53 @@
                     </div>
                     <div class="row g-3" style="margin-top: 2px">
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="strasse" placeholder="Straße" required>
+                            <input type="text" class="form-control" id="strasse" name="strasse" placeholder="Straße und Hausnummer" required>
                         </div>
                     </div>
                     <div class="row g-3" style="margin-top: 2px">
                         <div class="col-3">
-                            <input type="number" class="form-control" id="plz" placeholder="PLZ" aria-label="PLZ" required>
+                            <input type="number" class="form-control" id="plz" name="plz" placeholder="PLZ" aria-label="PLZ" required>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Ort" aria-label="Ort" required>
+                            <input type="text" class="form-control" placeholder="Ort" name="ort" id="ort" aria-label="Ort" required>
                         </div>
                     </div>
                     <div class="mb-3" style="margin-top: 10px">
-                        <input type="text" class="form-control" id="telenummer" placeholder="Telefonnummer" required>
+                        <input type="text" class="form-control" id="telenummer" name="telenummer" placeholder="Telefonnummer" required>
                     </div>
                     <div class="alert alert-danger" role="alert">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Zugestimmt" name="checkBoxCovid" id="covid" required>
+                            <label class="form-check-label" for="covid">
+                                Covid19 Krankheitssymptome
+                            </label>
+                        </div>
                         Ich versichere, dass ich nicht an Covid19 –typischen Krankheitssymptomen (v.a. Fieber, Husten und Atemnot, Geschmacks- und Geruchsstörungen) leide, außerdem versichere ich, dass ich nicht unter Quarantäne gestellt bin.
                     </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="unterschrift" placeholder="Unterschrift Kunde" required>
-                    </div>
-                    <!-- Modal Trigger -->
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Datenschutzrechtliche Hinweise
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Datenschutzrechtliche Hinweise:</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Die Verarbeitung Ihrer Daten erfolgt auf Grundlage von Art. 6 Abs. 1 c), d), e) DSGVO und Art. 9 Abs. 2 DSGVO. Die Verarbeitung ist erforderlich, um Beschäftigte im Friseurbetrieb zu schützen und ggf. Kontaktpersonen von an Covid-19 erkrankten Personen ausfindig zu machen und rechtzeitig verständigen zu können. Somit dient die Verarbeitung Ihrer Gesundheit und der Ihrer Mitmenschen.
-                                    Ihre Daten werden erforderlichenfalls an das zuständige Gesundheitsamt weitergegeben.
-                                    Ihre Daten werden gelöscht, sobald sie für ihre Erhebung nicht mehr erforderlich sind. Sie haben das Recht auf Auskunft über die bei uns gespeicherten Daten. Sie haben das Recht auf Berichtigung, Löschung und Einschränkung der Verarbeitung unter den in Art. 16 bis 18 DSGVO genannten Voraussetzungen. Ihnen steht ein Beschwerderecht bei der Aufsichtsbehörde zu.
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
+                    <div class="alert alert-danger" role="alert">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Zugestimmt" name="checkBoxDatenschutz" id="datenschutz" required>
+                            <label class="form-check-label" for="datenschutz">
+                                Datenschutzhinweis gelesen
+                            </label>
                         </div>
+                        Die Verarbeitung Ihrer Daten erfolgt auf Grundlage von Art. 6 Abs. 1 c), d), e) DSGVO und Art. 9 Abs. 2 DSGVO. Die Verarbeitung ist erforderlich, um Beschäftigte im Friseurbetrieb zu schützen und ggf. Kontaktpersonen von an Covid-19 erkrankten Personen ausfindig zu machen und rechtzeitig verständigen zu können. Somit dient die Verarbeitung Ihrer Gesundheit und der Ihrer Mitmenschen.
+                        Ihre Daten werden erforderlichenfalls an das zuständige Gesundheitsamt weitergegeben.
+                        Ihre Daten werden gelöscht, sobald sie für ihre Erhebung nicht mehr erforderlich sind. Sie haben das Recht auf Auskunft über die bei uns gespeicherten Daten. Sie haben das Recht auf Berichtigung, Löschung und Einschränkung der Verarbeitung unter den in Art. 16 bis 18 DSGVO genannten Voraussetzungen. Ihnen steht ein Beschwerderecht bei der Aufsichtsbehörde zu.
                     </div>
+
+
+                    <div class="alert alert-danger" role="alert">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Bestätigt" name="checkBoxBart" id="bart">
+                            <label class="form-check-label" for="bart">
+                                Bartschnitt
+                            </label>
+                        </div>
+                        Ich bestätige, dass ich einen negativen Corona-Test vom heutigen Tag vorgezeigt habe.
+                    </div>
+
+
                     <div class="col-12">
                         <button class="btn btn-primary" type="submit">Bestätigen</button>
                     </div>
