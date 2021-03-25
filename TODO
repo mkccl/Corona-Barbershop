@@ -1,0 +1,13 @@
+TODO
+
+Backend erweitern.
+Backend:
+# Daten sollen über das Backend nach outdated gelöscht werden (automatisch falls möglich, aber mind. händisch) - CHECK
+# ABER NUR DATEN DIE ALS OUTDATED MAKIERT SIND. - CHECK
+# Daten sollen runterladbar sein. - CHECK
+
+#ULTRA WICHTIG
+
+#QR-Code erstellen
+#Domain verlinken ( Routing ).
+#IMPRESSUM oder Link zur THE BARBER SHOP-Impressum
