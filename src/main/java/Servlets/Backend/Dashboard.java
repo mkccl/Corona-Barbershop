@@ -42,8 +42,8 @@ public class Dashboard extends HttpServlet {
          * Konfiguration muss ausgeführt werden.
          */
         if(session.getAttribute("setupFlag").equals("0")){
-            request.setAttribute("setupFlag", "false");
             RequestDispatcher dispatcher = request.getRequestDispatcher("backend/FirstVisit/content.jsp");
+            request.setAttribute("setupFlag", "false");
             request.setAttribute("email", session.getAttribute("email"));
             request.setAttribute("firmenname", session.getAttribute("firmenname"));
             dispatcher.forward(request, response);

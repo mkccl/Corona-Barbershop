@@ -6,6 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+<!-- end left-sidenav-->
 <footer class="footer text-center text-sm-left">
     © 2018-2019 Amezia <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</span>
 </footer>
@@ -13,8 +16,6 @@
 <!-- end page content -->
 </div>
 <!-- end page-wrapper -->
-
-
 <!-- jQuery  -->
 <script src="../../assets/js/jquery.min.js"></script>
 <script src="../../assets/js/bootstrap.bundle.min.js"></script>
