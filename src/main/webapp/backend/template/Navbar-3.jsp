@@ -26,40 +26,20 @@
             <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
                aria-haspopup="false" aria-expanded="false">
                 <i class="mdi mdi-bell-outline nav-icon"></i>
-                <span class="badge badge-danger badge-pill noti-icon-badge"> ( 0 )</span>
+                <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-lg">
                 <!-- item-->
                 <h6 class="dropdown-item-text">
-                    <%
-                        int counter = 0;
-                        if(!request.getAttribute("setupFlag").equals("false"))
-                            counter = (int) request.getAttribute("counter");
-
-                        if(counter > 0 && !request.getAttribute("setupFlag").equals("false")){
-                            out.println("Notifications ( " + session.getAttribute("counter") + " )");
-                        }
-                        else
-                            out.println("Notifications ( 0 )");
-
-                    %>
+                    Notifications (258)
                 </h6>
                 <div class="slimscroll notification-list">
                     <!-- item-->
-
-                     <%  if(counter > 0 && !request.getAttribute("setupFlag").equals("false")){
-                            out.println("<a href=\"javascript:void(0);\" class=\"dropdown-item notify-item active\">");
-                            out.println("<div class=\"notify-icon bg-success\"><i class=\"mdi mdi-cart-outline\"></i></div>\n");
-                            out.println("<p class=\"notify-details\">" + session.getAttribute("counter") + " Daten sind veraltet." + "<small class=\"text-muted\">Sie wurden soeben aus dem System gelöscht.</small></p></a>\n");
-                        }
-
-                     %>
-
+                    <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                        <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                        <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                    </a>
                 </div>
-                <!-- All-->
-                <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
-                    View all <i class="fi-arrow-right"></i>
-                </a>
             </div>
         </li>
 

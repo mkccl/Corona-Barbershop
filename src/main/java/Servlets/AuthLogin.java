@@ -15,6 +15,7 @@ public class AuthLogin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         SQLHelper sqlHelper = new SQLHelper();
+        HttpSession session = request.getSession();
 
         /**
          * Prüfen ob User vorhanden ist.
@@ -27,33 +28,34 @@ public class AuthLogin extends HttpServlet {
         String passwortPlain = request.getParameter("passwort");
         String email = request.getParameter("email");
 
+
         String[] userData;
         userData = sqlHelper.getUserData(email);
 
 
-        BCrypt.Result result = BCrypt.verifyer().verify(passwortPlain.toCharArray(), userData[1]);
-
-
-        if(result.verified){
-
-            // Session wird gestartet bevor User auf das Dashboard kommt.
-            HttpSession session = request.getSession();
-            System.out.println("Passwort ist korrekt");
-            session.setAttribute("email", email);
-            session.setAttribute("id_auth_user", userData[0]);
-            session.setAttribute("setupFlag", userData[2]);
-            session.setAttribute("firmenname", userData[3]);
-            session.setAttribute("erstellungsDatum", userData[4]);
-
-
-            response.sendRedirect("/Dashboard");
+        try{
+            BCrypt.Result result = BCrypt.verifyer().verify(passwortPlain.toCharArray(), userData[1]);
+            if(result.verified){
+                // Session wird gestartet bevor User auf das Dashboard kommt.
+                System.out.println("Passwort ist korrekt");
+                session.setAttribute("email", email);
+                session.setAttribute("id_auth_user", userData[0]);
+                session.setAttribute("setupFlag", userData[2]);
+                session.setAttribute("firmenname", userData[3]);
+                session.setAttribute("erstellungsDatum", userData[4]);
+                response.sendRedirect("/Dashboard");
+            }
+            else{
+                System.out.println("Falsches Passwort");
+                response.sendRedirect("index.jsp");
+            }
         }
-        else{
-
-            System.out.println("Falsches Passwort");
-            response.sendRedirect("index.jsp");
-
+        catch (NullPointerException npe){
+            response.sendRedirect("../404.jsp");
         }
+
+
+
 
     }
 }
