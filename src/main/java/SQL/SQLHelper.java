@@ -40,10 +40,13 @@ public class SQLHelper {
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(String.format("SELECT * FROM datenerhebung_eingang WHERE id_auth_user = '%s'" , idAuthUser));
             while (rs.next()){
-                if(date.getDateValidation(rs.getString("erfassungs_datum")))
+                if(date.getDateValidation(rs.getString("erfassungs_datum"))){
                     updateDateFlag(rs.getInt("id"), 1, idAuthUser);
+                    fetchDateFlag(idAuthUser);
+                    counter++;
+                }
                 deleteUserWithDateFlag(idAuthUser, rs.getInt("id"));
-                counter++;
+                //counter++;
             }
             return counter;
 
@@ -252,7 +255,7 @@ public class SQLHelper {
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(String.format("SELECT * FROM datenerhebung_eingang WHERE dateFlag = 1 AND id_auth_user = %s", idAuthUser));
             while (rs.next()){
-                int id = rs.getInt("id");
+                //int id = rs.getInt("id");
                 counter++;
             }
             return counter;

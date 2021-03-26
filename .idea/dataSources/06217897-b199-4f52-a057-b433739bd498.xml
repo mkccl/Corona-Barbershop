@@ -924,146 +924,158 @@ SELECT|sys.sys_config:null
     <table id="288" parent="3" name="datenerhebung_eingang">
       <Collation>utf8mb4_general_ci</Collation>
     </table>
-    <column id="289" parent="287" name="id_auth_user">
+    <table id="289" parent="3" name="kontaktformular"/>
+    <column id="290" parent="287" name="id_auth_user">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="290" parent="287" name="firmenname">
+    <column id="291" parent="287" name="firmenname">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="291" parent="287" name="email">
+    <column id="292" parent="287" name="email">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="292" parent="287" name="passwort">
+    <column id="293" parent="287" name="passwort">
       <Position>4</Position>
       <DataType>varchar(6000)|0s</DataType>
     </column>
-    <column id="293" parent="287" name="erstellungsDatum">
+    <column id="294" parent="287" name="erstellungsDatum">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="294" parent="287" name="straße">
+    <column id="295" parent="287" name="straße">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="295" parent="287" name="plz">
+    <column id="296" parent="287" name="plz">
       <Position>7</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="296" parent="287" name="ort">
+    <column id="297" parent="287" name="ort">
       <Position>8</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="297" parent="287" name="telefon">
+    <column id="298" parent="287" name="telefon">
       <Position>9</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="298" parent="287" name="setupFlag">
+    <column id="299" parent="287" name="setupFlag">
       <Position>10</Position>
       <DataType>tinyint(1)|0s</DataType>
     </column>
-    <column id="299" parent="287" name="nachname">
+    <column id="300" parent="287" name="nachname">
       <Position>11</Position>
       <DataType>varchar(44)|0s</DataType>
     </column>
-    <column id="300" parent="287" name="vorname">
+    <column id="301" parent="287" name="vorname">
       <Position>12</Position>
       <DataType>varchar(44)|0s</DataType>
     </column>
-    <key id="301" parent="287" name="PRIMARY">
+    <key id="302" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_auth_user</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="302" parent="288" name="id">
+    <column id="303" parent="288" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="303" parent="288" name="vorname">
+    <column id="304" parent="288" name="vorname">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="304" parent="288" name="nachname">
+    <column id="305" parent="288" name="nachname">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="305" parent="288" name="ort">
+    <column id="306" parent="288" name="ort">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="306" parent="288" name="straße">
+    <column id="307" parent="288" name="straße">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="307" parent="288" name="plz">
+    <column id="308" parent="288" name="plz">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="308" parent="288" name="tele">
+    <column id="309" parent="288" name="tele">
       <Position>7</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="309" parent="288" name="erfassungs_datum">
+    <column id="310" parent="288" name="erfassungs_datum">
       <Position>8</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="310" parent="288" name="datenschutz_zugestimmt">
+    <column id="311" parent="288" name="datenschutz_zugestimmt">
       <Position>9</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="311" parent="288" name="kein_Covid">
+    <column id="312" parent="288" name="kein_Covid">
       <Position>10</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="312" parent="288" name="covid_Test_Bartschnitt">
+    <column id="313" parent="288" name="covid_Test_Bartschnitt">
       <Position>11</Position>
       <DataType>varchar(45)|0s</DataType>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </column>
-    <column id="313" parent="288" name="dateFlag">
+    <column id="314" parent="288" name="dateFlag">
       <Position>12</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="314" parent="288" name="id_auth_user">
+    <column id="315" parent="288" name="id_auth_user">
       <Position>13</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="315" parent="288" name="id_UNIQUE">
+    <index id="316" parent="288" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="316" parent="288" name="PRIMARY">
+    <key id="317" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="317" parent="288" name="id_UNIQUE">
+    <key id="318" parent="288" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="319" parent="289" name="id_kontaktformular">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <key id="320" parent="289" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_kontaktformular</ColNames>
+      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>

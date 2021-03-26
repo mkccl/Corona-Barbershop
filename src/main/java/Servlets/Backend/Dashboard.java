@@ -54,16 +54,19 @@ public class Dashboard extends HttpServlet {
             request.setAttribute("firmenname", session.getAttribute("firmenname"));
             request.setAttribute("email", session.getAttribute("email"));
             request.setAttribute("erstellungsDatum", session.getAttribute("erstellungsDatum"));
-
-
-
             // User dateFlag 1
+            int counterDeletedUser = sqlHelper.deleteUserWithFlag((String)session.getAttribute("id_auth_user"));
+            int notificationCounter = 0;
 
-            int counter = sqlHelper.deleteUserWithFlag((String)session.getAttribute("id_auth_user"));
+            // Notification verwaltung
+            if(counterDeletedUser > 0)
+                ++notificationCounter;
 
-            //int counter = sqlHelper.fetchDateFlag((String)session.getAttribute("id_auth_user"));
-            System.out.println("Counter im Dashboard " + counter);
-            request.setAttribute("counter", counter);
+
+            System.out.println("Counter im Dashboard " + counterDeletedUser);
+
+            request.setAttribute("notificationCounter", notificationCounter);
+            request.setAttribute("counterDeletedUser", counterDeletedUser);
 
 
 
@@ -73,14 +76,6 @@ public class Dashboard extends HttpServlet {
         }
 
 
-
-
-
-
-
-
-
     }
-
 
 }

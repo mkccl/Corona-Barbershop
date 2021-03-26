@@ -41,6 +41,10 @@
 <script src="../../assets/plugins/datatables/dataTables.responsive.min.js"></script>
 <script src="../../assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
 
+<!--Wysiwig js-->
+<script src="../../assets/plugins/tinymce/tinymce.min.js"></script>
+<script src="../../assets/pages/jquery.form-editor.js"></script>
+
 <!-- Datatable init js -->
 <script src="../../assets/pages/jquery.table-datatable.js"></script>
 

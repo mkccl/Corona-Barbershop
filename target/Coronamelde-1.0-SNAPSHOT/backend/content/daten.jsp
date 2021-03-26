@@ -1,7 +1,8 @@
-<%@ page import="SQL.SQLHelper" %>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="SQL.SQLSecrets" %>
-<%@ page import="java.io.PrintWriter" %><%--
+
+<%--
   Created by IntelliJ IDEA.
   User: ccl
   Date: 3/24/2021
@@ -18,9 +19,7 @@
 <!-- Content -->
 
 <div class="page-content">
-
     <div class="container-fluid">
-
         <!-- Page-Title -->
         <div class="row">
             <div class="col-sm-12">
@@ -99,11 +98,6 @@
                         </div>
                     </div> <!-- end col -->
                 </div> <!-- end row -->
-
-
-
-
-
             </div>
         </div>
     </div>

@@ -37,7 +37,14 @@
             </li>
 
             <li class="menu-title">Coronamelde</li>
+            <li>
+                <a href="javascript: void(0);"><i class="mdi mdi-briefcase-check"></i><span>Kontaktformular</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                <ul class="nav-second-level" aria-expanded="false">
+                    <li><a href="/Kontaktformular">Kontaktformular erstellen</a></li>
+                    <li><a href="advanced-rangeslider.html">Kontaktformular verwalten</a></li>
 
+                </ul>
+            </li>
             <li>
                 <a href="javascript: void(0);"><i class="mdi mdi-briefcase-check"></i><span>Datensätze</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                 <ul class="nav-second-level" aria-expanded="false">
@@ -48,7 +55,7 @@
             <li>
                 <a href="javascript: void(0);"><i class="mdi mdi-buffer"></i><span>QR-Code</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                 <ul class="nav-second-level" aria-expanded="false">
-                    <li><a href="advanced-rangeslider.html">QR-Code erstellen</a></li>
+                    <li><a href="/QR-Code">QR-Code erstellen</a></li>
                     <li><a href="advanced-rangeslider.html">QR-Code verwalten</a></li>
 
                 </ul>

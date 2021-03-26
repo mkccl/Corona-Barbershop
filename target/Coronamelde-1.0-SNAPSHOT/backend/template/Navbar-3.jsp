@@ -1,4 +1,5 @@
-<%--
+<%@ page import="Helper.Parse" %>
+<%@ page import="Helper.Notification" %><%--
   Created by IntelliJ IDEA.
   User: ccl
   Date: 3/23/2021
@@ -9,15 +10,7 @@
 <!-- Navbar -->
 <nav class="navbar-custom">
 
-    <!-- Search input -->
-    <div class="search-wrap" id="search-wrap">
-        <div class="search-bar">
-            <input class="search-input" type="search" placeholder="Search here.." />
-            <a href="javascript:void(0);" class="close-search search-btn" data-target="#search-wrap">
-                <i class="mdi mdi-close-circle"></i>
-            </a>
-        </div>
-    </div>
+
 
     <ul class="list-unstyled topbar-nav float-right mb-0">
 
@@ -26,19 +19,22 @@
             <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
                aria-haspopup="false" aria-expanded="false">
                 <i class="mdi mdi-bell-outline nav-icon"></i>
-                <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+                <span class="badge badge-danger badge-pill noti-icon-badge">
+                    <%
+                        Notification notification = new Notification();
+                        out.println(notification.notificationbarHot(request.getAttribute("notificationCounter")));
+
+                    %></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-lg">
                 <!-- item-->
                 <h6 class="dropdown-item-text">
-                    Notifications (258)
+                    Notifications ( <%= notification.notificationbarHot(request.getAttribute("notificationCounter")) %> )
                 </h6>
                 <div class="slimscroll notification-list">
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                        <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                        <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
-                    </a>
+
+                    <%= notification.notificationbar(request.getAttribute("counterDeletedUser"))%>
                 </div>
             </div>
         </li>

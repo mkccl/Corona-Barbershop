@@ -27,6 +27,10 @@
     <!-- Form Wizard -->
     <link rel="stylesheet" href="../../assets/plugins/jquery-steps/jquery.steps.css">
 
+    <!-- Dropzone css -->
+    <link href="../../assets/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/plugins/dropify/css/dropify.min.css" rel="stylesheet">
+
     <!-- App css -->
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/css/icons.css" rel="stylesheet" type="text/css" />
