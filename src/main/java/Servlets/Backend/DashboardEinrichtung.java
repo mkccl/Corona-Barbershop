@@ -18,6 +18,9 @@ public class DashboardEinrichtung extends HttpServlet {
         HttpSession session = request.getSession();
         SQLHelper sqlHelper = new SQLHelper();
 
+        if(session.getAttribute("firmenname").equals("NULL"))
+            response.sendRedirect("index.jsp");
+
         // Personenbezogene Daten
         String nachname = request.getParameter("nachname");
         String vorname = request.getParameter("vorname");

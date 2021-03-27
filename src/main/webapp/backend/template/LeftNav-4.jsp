@@ -17,7 +17,7 @@
                 <a href="javascript: void(0);"><i class="mdi mdi-speedometer"></i><span>Dashboards</span><span class="badge badge-danger badge-pill float-right">9+</span></a>
                 <ul class="nav-second-level" aria-expanded="false">
                     <li><a href="index.html">Dashboard 1</a></li>
-                    <li><a href="index-2.html">Dashboard 2</a></li>
+                    <li><a href="index-2.html"><%= request.getAttribute("printer")%></a></li>
                 </ul>
             </li>
 

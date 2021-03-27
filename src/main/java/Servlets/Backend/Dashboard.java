@@ -2,6 +2,7 @@ package Servlets.Backend;
 
 import Helper.CurrentDate;
 import SQL.SQLHelper;
+import Test.Printer;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,10 +31,12 @@ public class Dashboard extends HttpServlet {
         HttpSession session = request.getSession();
         SQLHelper sqlHelper = new SQLHelper();
         CurrentDate date = new CurrentDate();
+
         /**
          * Session
          */
-
+        if(session.getAttribute("firmenname").equals("NULL"))
+            response.sendRedirect("index.jsp");
         session.getAttribute("id_auth_user");
         session.getAttribute("erstellungsDatum");
 
@@ -67,7 +70,6 @@ public class Dashboard extends HttpServlet {
 
             request.setAttribute("notificationCounter", notificationCounter);
             request.setAttribute("counterDeletedUser", counterDeletedUser);
-
 
 
             // Letzter call

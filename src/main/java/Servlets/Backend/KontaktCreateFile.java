@@ -26,6 +26,9 @@ public class KontaktCreateFile extends HttpServlet {
 
         HttpSession session = request.getSession();
 
+        if(session.getAttribute("firmenname").equals("NULL"))
+            response.sendRedirect("index.jsp");
+
         // Erstellen von Ordner und File
         File folder = new File("F:/Programme/Tomcat9/webapps/ROOT/kontaktformular/" + session.getAttribute("firmenname"));
         File file = new File("F:/Programme/Tomcat9/webapps/ROOT/kontaktformular/" + session.getAttribute("firmenname") + "/" + "index.jsp");
@@ -83,29 +86,6 @@ public class KontaktCreateFile extends HttpServlet {
                     myWriter.write(template.TemplateWithLogo(filePart.getSubmittedFileName()));
                     myWriter.close();
                 }
-                else{
-                    // Seite hat Logo und bietet körpernahe Dienstleistung an
-                    if(request.getParameter("logo").equals("hasLogo") && checkBoxBart.equals("checked") || checkBoxKosmetik.equals("checked") || checkBoxMakeup.equals("checked") ){
-                        myWriter.write(template.TemplateWithLogoWithExtra(filePart.getSubmittedFileName()));
-                        myWriter.close();
-                    }
-                    else{
-                        // Seite hat kein Logo und bietet keine körpernahen Dienstleistungen an
-                        if(request.getParameter("logo").equals("null")){
-                            myWriter.write(template.TemplateWithoutLogo());
-                            myWriter.close();
-                        }
-                        else{
-                            // Seite hat kein Logo und bietet körpernahe Dienstleistungen an
-                            if(request.getParameter("logo").equals("null") && checkBoxBart.equals("checked") || checkBoxKosmetik.equals("checked") || checkBoxMakeup.equals("checked")){
-                                myWriter.write(template.TemplateWithoutLogoWithExtra());
-                                myWriter.close();
-                            }
-                        }
-                    }
-                }
-
-
 
                 System.out.println("Successfully wrote to the file.");
             } catch (IOException e) {

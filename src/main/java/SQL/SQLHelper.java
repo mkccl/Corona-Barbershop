@@ -31,7 +31,6 @@ public class SQLHelper {
 
     }
 
-
     public int deleteUserWithFlag(String idAuthUser){
         int counter = 0;
         try{

@@ -22,6 +22,9 @@ public class Datensaetze extends HttpServlet {
         HttpSession session = request.getSession();
         SQLHelper sqlHelper = new SQLHelper();
 
+        if(session.getAttribute("firmenname").equals("NULL"))
+            response.sendRedirect("index.jsp");
+
         //String id_auth_user = (String)session.getAttribute("id_auth_user");
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("backend/content/daten.jsp");

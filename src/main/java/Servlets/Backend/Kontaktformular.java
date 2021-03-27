@@ -14,11 +14,17 @@ public class Kontaktformular extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("backend/content/kontaktformularerstellung.jsp");
+        if(session.getAttribute("firmenname").equals("NULL"))
+            response.sendRedirect("index.jsp");
+
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("backend/content/kontaktbogen.jsp");
         request.setAttribute("id_auth_user", session.getAttribute("id_auth_user"));
         request.setAttribute("email", session.getAttribute("email"));
         request.setAttribute("firmenname", session.getAttribute("firmenname"));
         dispatcher.forward(request, response);
+
+
 
         
 

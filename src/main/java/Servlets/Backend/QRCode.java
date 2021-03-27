@@ -16,6 +16,9 @@ public class QRCode extends HttpServlet {
 
         HttpSession session = request.getSession();
 
+        if(session.getAttribute("firmenname").equals("NULL"))
+            response.sendRedirect("index.jsp");
+
         File folder1 = new File("../webapps/ROOT/kontaktformular/barbershop");
         File file1 = new File("../webapps/ROOT/kontaktformular/barbershop/index.jsp");
 

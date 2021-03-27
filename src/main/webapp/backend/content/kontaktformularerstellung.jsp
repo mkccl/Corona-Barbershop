@@ -104,8 +104,6 @@
                                         <p class="text-muted font-13 mb-4">Das Impressum wird auf Ihrem Kontaktbogen ausgegeben.</p>
 
                                         <textarea id="elm1" name="textArea"></textarea>
-
-
                                     </div>
                                 </div>
                             </div> <!-- end col -->
