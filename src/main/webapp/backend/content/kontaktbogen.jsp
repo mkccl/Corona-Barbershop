@@ -70,6 +70,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <form action="/Kontaktseite" method="post">
                     <div class="col-md-12 col-lg-8">
                         <div class="card">
                             <div class="card-body">
@@ -156,14 +157,14 @@
                                 </div><!-- /.modal-content -->
                             </div><!-- /.modal-dialog -->
                         </div><!-- /.modal -->
-
                     </div>
+                    </form>
                     <div class="col-md-12 col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="mt-0">Sie haben spezielle Design wünsche?</h5>
                                 <p class="text-muted font-13 mb-4">Keine Sorge! Wir kümmern uns darum.</p>
-                                <form>
+                                <form action="/sendMail" method="post">
                                     <div class="form-group row">
                                         <div class="col-sm-12 col-lg-6  mo-b-15">
                                             <input class="form-control" type="text" id="name" placeholder="Name">
@@ -186,14 +187,9 @@
                             </div>
                         </div>
                     </div><!--end col-->
-                    <div class="col-12">
-
-                    </div> <!-- end col -->
-
                 </div><!--end row-->
-
-
             </div>
+
         </div>
     </div>
 

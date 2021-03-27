@@ -83,7 +83,7 @@ public class KontaktCreateFile extends HttpServlet {
 
                 // Seite hat Logo und keine körpernahe Dienstleistungen an
                 if(request.getParameter("logo").equals("hasLogo")){
-                    myWriter.write(template.TemplateWithLogo(filePart.getSubmittedFileName()));
+                    myWriter.write(template.TemplateOneWithoutExtra(filePart.getSubmittedFileName()));
                     myWriter.close();
                 }
 
